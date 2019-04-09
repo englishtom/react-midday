@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import requiredIf from 'react-required-if';
 
-const MiddaySection = ({sections, children, tagName, className, id}) => {
+const MiddaySection = ({sections, children, tagName, className, id, name}) => {
     
     let data = {};
 
-    _.forEach(sections, (name, section) => {
-        data[`data-${section}`] = name;
-    });
+    if(name) {
+        data['data-midday'] = name;
+    } else {
+        _.forEach(sections, (name, section) => {
+            data[`data-${section}`] = name;
+        });
+    }
 
     return React.createElement(tagName, {
         ...data,
@@ -25,9 +30,10 @@ MiddaySection.defaultProps = {
 };
 
 MiddaySection.propTypes = {
-    sections: PropTypes.object.isRequired,
     className: PropTypes.string,
     id: PropTypes.string,
+    name: requiredIf(PropTypes.string, props => !props.sections),
+    sections: requiredIf(PropTypes.object, props => !props.name),
     tagName: PropTypes.string.isRequired
 };
 

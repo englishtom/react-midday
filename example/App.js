@@ -48,11 +48,11 @@ const App = () => {
                 <a className="logo">Options Logo</a>
             </MiddayHeader>
 
-            <MiddaySection tagName="section" sections={{midday: 'white'}}>
+            <MiddaySection tagName="section" name="white">
 
             </MiddaySection>
 
-            <MiddaySection tagName="section" sections={{midday: 'black'}}>
+            <MiddaySection tagName="section" name="black">
 
             </MiddaySection>
 

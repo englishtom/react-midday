@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav.fixed {
+    position: fixed;
+    font-size: 30px;
+    width: 25%;
+
+    .middayHeader, .customOuter {
+        &.default, &.primary {
+            color: red;
+        }
+        &.white {
+            color: white;
+        }
+        &.black {
+            color: black;
+        }
+        &.blue {
+            color: blue;
+        }
+    }
+
+    &#custom-nav {
+        margin-left: 75%;
+        .img {
+            float: right;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &#custom-nav-no-default {
+        margin-left: 50%;
+        .img {
+            float: right;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &#options-nav {
+        margin-left: 25%;
+    }
+
+}
+
+section {
+    height: 100vh;
+    &:nth-child(5) {
+        background: blue;
+    }
+    &:nth-child(6) {
+        background: green;
+    }
+    &:nth-child(7) {
+        background: red;
+    }
+}
+
+footer {
+    height: 94vh;
+}

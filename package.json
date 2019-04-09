@@ -31,7 +31,8 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "midday.js": "^1.0.1",
-    "react": "^16.8.6"
+    "react": "^16.8.6",
+    "react-required-if": "^1.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",

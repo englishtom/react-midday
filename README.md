@@ -1,6 +1,6 @@
 # react-midday
 
-A React wrapper for the midday.js module.
+A React wrapper for the [midday.js](https://github.com/englishtom/midday.js) module.
 
 ## Installation
 

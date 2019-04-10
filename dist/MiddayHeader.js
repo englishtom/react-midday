@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _midday = _interopRequireDefault(require("midday.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -66,7 +68,8 @@ function (_Component) {
     }
   }, {
     key: "componentWillUnmount",
-    value: function componentWillUnmount() {// unset?
+    value: function componentWillUnmount() {// todo
+      // unset?
     }
   }, {
     key: "componentDidUpdate",
@@ -76,8 +79,14 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var children = this.props.children;
-      return _react["default"].createElement("div", {
+      var _this$props = this.props,
+          children = _this$props.children,
+          className = _this$props.className,
+          id = _this$props.id,
+          tagName = _this$props.tagName;
+      return _react["default"].createElement(tagName, {
+        className: className,
+        id: id,
         ref: this.container
       }, children);
     }
@@ -87,10 +96,24 @@ function (_Component) {
 }(_react.Component);
 
 MiddayHeader.defaultProps = {
-  options: {}
+  options: {
+    defaultClass: 'default',
+    headerClass: 'middayHeader',
+    innerClass: 'middayInner',
+    sectionSelector: 'midday'
+  },
+  tagName: 'div'
 };
 MiddayHeader.propTypes = {
-  options: PropTypes.object
+  options: _propTypes["default"].shape({
+    defaultClass: _propTypes["default"].string,
+    headerClass: _propTypes["default"].string,
+    innerClass: _propTypes["default"].string,
+    sectionSelector: _propTypes["default"].string
+  }),
+  className: _propTypes["default"].string,
+  id: _propTypes["default"].string,
+  tagName: _propTypes["default"].string.isRequired
 };
 var _default = MiddayHeader;
 exports["default"] = _default;

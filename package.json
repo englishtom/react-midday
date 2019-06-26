@@ -1,6 +1,6 @@
 {
   "name": "react-midday",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React wrapper for the midday.js module",
   "main": "dist/index.js",
   "scripts": {
@@ -30,7 +30,7 @@
   "homepage": "https://github.com/englishtom/react-midday#readme",
   "dependencies": {
     "lodash": "^4.17.11",
-    "midday.js": "^1.0.1",
+    "midday.js": "^1.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-required-if": "^1.0.3"
